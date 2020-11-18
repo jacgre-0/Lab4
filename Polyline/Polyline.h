@@ -6,7 +6,7 @@ public:
     PolyLine(int length);
     ~PolyLine();
 public:
-    void add_point(Point2D point);
+    void add_point(Point2D* point);
     Point2D at(int index) const;
     void remove_point();
     bool contains(const Point2D& point);
@@ -16,7 +16,7 @@ public:
 private:
     int length;
     int numPoints{};
-    Point2D* points{};
+    Point2D** points;
     bool isFull{};
     bool isEmpty{};
 };

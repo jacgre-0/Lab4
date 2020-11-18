@@ -5,14 +5,18 @@ PolyLine::PolyLine(int length)
     :
     length(length)
 {
-    points = new Point2D[length];
+    points = new Point2D * [length] {};
 }
 
 PolyLine::~PolyLine() {
+    for (int i = 0; i < length; i++) {
+        if(points[i] != nullptr)
+            delete points[i];
+    }
     delete[] points;
 }
 
-void PolyLine::add_point(Point2D point) {
+void PolyLine::add_point(Point2D* point) {
     if (isFull) {
         std::cout << "Error! Polyline is already full." << std::endl;
         return;
@@ -28,7 +32,7 @@ void PolyLine::add_point(Point2D point) {
 Point2D PolyLine::at(int index) const {
 
     if (index < numPoints || index < 0) {
-        return points[index];
+        return *points[index];
     }
 
     std::cout << "Error! index is not valid" << std::endl;
@@ -41,8 +45,10 @@ void PolyLine::remove_point() {
         return;
     }
 
-    auto addr = &points[numPoints - 1];
-    addr = nullptr;
+    auto index = numPoints - 1;
+    delete points[index];
+    points[index] = nullptr;
+    
     numPoints--;
 
     if (numPoints == 0) {
@@ -51,8 +57,8 @@ void PolyLine::remove_point() {
 }
 
 bool PolyLine::contains(const Point2D& point) {
-    for (int i = 0; i < length; i++) {
-        if (points[i] == point)
+    for (int i = 0; i < numPoints; i++) {
+        if (points[i] != nullptr && *points[i] == point)
             return true;
     }
     return false;
@@ -66,13 +72,13 @@ float PolyLine::total_length() const {
     float dist{};
 
     for (int i = 0; i < numPoints-1; i++) {
-        dist += points[i].distance(points[i + 1]);
+        dist += points[i]->distance(*points[i + 1]);
     }
     return dist;
 }
 
 void PolyLine::print_coords() const {
     for (int i = 0; i < numPoints; i++) {
-        std::cout << points[i].to_string() << std::endl;
+        std::cout << points[i]->to_string() << std::endl;
     }
 }
