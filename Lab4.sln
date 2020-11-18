@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Point2D", "Point2D\Point2D.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polyline", "Polyline\Polyline.vcxproj", "{13DB16EA-59EC-43F3-8AB3-86FBE1D38161}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Card deck", "Card deck\Card deck.vcxproj", "{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{13DB16EA-59EC-43F3-8AB3-86FBE1D38161}.Release|x64.Build.0 = Release|x64
 		{13DB16EA-59EC-43F3-8AB3-86FBE1D38161}.Release|x86.ActiveCfg = Release|Win32
 		{13DB16EA-59EC-43F3-8AB3-86FBE1D38161}.Release|x86.Build.0 = Release|Win32
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Debug|x64.ActiveCfg = Debug|x64
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Debug|x64.Build.0 = Debug|x64
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Debug|x86.ActiveCfg = Debug|Win32
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Debug|x86.Build.0 = Debug|Win32
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Release|x64.ActiveCfg = Release|x64
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Release|x64.Build.0 = Release|x64
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Release|x86.ActiveCfg = Release|Win32
+		{46CD4ED8-3157-4D36-8C8A-E7CE089B9B65}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
