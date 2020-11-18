@@ -26,8 +26,24 @@ Point2D PolyLine::at(int index) const {
     if (index < numPoints || index < 0) {
         return points[index];
     }
+
     std::cout << "Error! index is not valid" << std::endl;
     return Point2D();
+}
+
+void PolyLine::remove_point() {
+    if (isEmpty) {
+        std::cout << "Cannot remove any points because the polyline is already empty" << std::endl;
+        return;
+    }
+
+    auto addr = &points[numPoints - 1];
+    addr = nullptr;
+    numPoints--;
+
+    if (numPoints == 0) {
+        isEmpty = true;
+    }
 }
 
 bool PolyLine::contains(const Point2D& point) {

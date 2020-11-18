@@ -17,4 +17,5 @@ private:
     int numPoints{};
     Point2D* points{};
     bool isFull{};
+    bool isEmpty{};
 };
