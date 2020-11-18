@@ -4,6 +4,7 @@
 class PolyLine {
 public:
     PolyLine(int length);
+    ~PolyLine();
 public:
     void add_point(Point2D point);
     Point2D at(int index) const;

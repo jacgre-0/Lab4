@@ -8,6 +8,10 @@ PolyLine::PolyLine(int length)
     points = new Point2D[length];
 }
 
+PolyLine::~PolyLine() {
+    delete[] points;
+}
+
 void PolyLine::add_point(Point2D point) {
     if (isFull) {
         std::cout << "Error! Polyline is already full." << std::endl;
