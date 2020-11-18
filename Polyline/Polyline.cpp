@@ -21,6 +21,14 @@ void PolyLine::add_point(Point2D point) {
     }
 }
 
+bool PolyLine::contains(const Point2D& point) {
+    for (int i = 0; i < length; i++) {
+        if (points[i] == point)
+            return true;
+    }
+    return false;
+}
+
 int PolyLine::get_total_points() const {
     return numPoints;
 }
