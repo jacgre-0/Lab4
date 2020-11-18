@@ -10,7 +10,7 @@ public:
     void remove_point();
     bool contains(const Point2D& point);
     int get_total_points() const;
-    float total_length();
+    float total_length() const;
     void print_coords() const;
 private:
     int length;

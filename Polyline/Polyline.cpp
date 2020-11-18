@@ -32,3 +32,12 @@ bool PolyLine::contains(const Point2D& point) {
 int PolyLine::get_total_points() const {
     return numPoints;
 }
+
+float PolyLine::total_length() const {
+    float dist{};
+
+    for (int i = 0; i < numPoints-1; i++) {
+        dist += points[i].distance(points[i + 1]);
+    }
+    return dist;
+}
