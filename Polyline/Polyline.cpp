@@ -21,6 +21,15 @@ void PolyLine::add_point(Point2D point) {
     }
 }
 
+Point2D PolyLine::at(int index) const {
+
+    if (index < numPoints || index < 0) {
+        return points[index];
+    }
+    std::cout << "Error! index is not valid" << std::endl;
+    return Point2D();
+}
+
 bool PolyLine::contains(const Point2D& point) {
     for (int i = 0; i < length; i++) {
         if (points[i] == point)
@@ -40,4 +49,10 @@ float PolyLine::total_length() const {
         dist += points[i].distance(points[i + 1]);
     }
     return dist;
+}
+
+void PolyLine::print_coords() const {
+    for (int i = 0; i < numPoints; i++) {
+        std::cout << points[i].to_string() << std::endl;
+    }
 }
