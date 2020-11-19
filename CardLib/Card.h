@@ -9,9 +9,12 @@ public:
     Card(const int suite, const int rank);
 public:
     void Print() const;
+    auto GetRank() const { return rank; }
+    auto GetSuit() const { return suit; }
 public:
     bool operator<(const Card& rhs);
     bool operator>(const Card& rhs);
+    bool operator==(const Card& rhs);
 private:
     struct Suit {
         std::string name;
@@ -26,7 +29,8 @@ private:
         { "Clubs",0 },
         { "Diamonds",1 },
         { "Hearts",2 },
-        { "Spades",3 }
+        { "Spades",3 },
+        { "Default", 4}
     };
     std::map<std::string, int> rankNameAndValues{
         {"2",0},
@@ -49,8 +53,10 @@ private:
       {0,"Clubs"},
       {1,"Diamonds"},
       {2,"Hearts"},
-      {3,"Spades"}
+      {3,"Spades"},
+      {4, "Default"}
     };
+
     std::map<int, std::string> revRankNameAndValues{
         {0,"2"},
         {1,"3"},

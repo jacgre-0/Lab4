@@ -32,18 +32,23 @@ void Card::Print() const {
 
 bool Card::operator<(const Card& rhs) {
     if (rank.value == rhs.rank.value) {
-        return suit.value < rhs.suit.value;
+        return suit.value < rhs.GetSuit().value;
     }
     else {
-        return rank.value < rhs.rank.value;
+        return rank.value < rhs.GetRank().value;
     }
 }
 
 bool Card::operator>(const Card& rhs) {
     if (rank.value == rhs.rank.value) {
-        return suit.value > rhs.suit.value;
+        return suit.value > rhs.GetSuit().value;
     }
     else {
-        return rank.value > rhs.rank.value;
+        return rank.value > rhs.GetRank().value;
     }
+}
+
+bool Card::operator==(const Card& rhs) {
+    return rank.value == rhs.GetRank().value && suit.value == rhs.GetSuit().value
+        && rank.name == rhs.GetRank().name && suit.name == rhs.GetSuit().name;
 }
