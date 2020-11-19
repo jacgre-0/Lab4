@@ -9,6 +9,8 @@ public:
     Card(const int suite, const int rank);
 public:
     void Print() const;
+    auto GetSuit() const { return suit; }
+    auto GetRank() const { return rank; }
 private:
     struct Suit {
         std::string name;
@@ -20,11 +22,11 @@ private:
         int value{ -1 };
     };
 private:
-    std::map<const char*, int> suiteNameAndValues{
-        {"Clubs",0},
-        {"Diamonds",1},
-        {"Hearts",2},
-        {"Spades",3}
+    std::map<const char*, int> suiteNameAndValues {
+        {"Clubs",0 },
+        { "Diamonds",1 },
+        { "Hearts",2 },
+        { "Spades",3 }
     };
 
     std::map<const char*, int> rankNameAndValues{
