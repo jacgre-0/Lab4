@@ -20,14 +20,14 @@ private:
         int value{ -1 };
     };
 private:
-    std::map<const char*, int> suiteNameAndValues {
+    std::map<std::string, int> suiteNameAndValues {
         {"Clubs",0},
         {"Diamonds",1},
         {"Hearts",2},
         {"Spades",3}
     };
 
-    std::map<const char*, int> rankNameAndValues {
+    std::map<std::string, int> rankNameAndValues {
         {"2",0}, 
         {"3",1}, 
         {"4",2}, 
@@ -44,14 +44,14 @@ private:
         {"Joker",13}
     };
 
-    std::map<int, const char*> revSuiteNameAndValues {
+    std::map<int, std::string> revSuiteNameAndValues {
       {0,"Clubs"},
       {1,"Diamonds"},
       {2,"Hearts"},
       {3,"Spades"}
     };
 
-    std::map<int, const char*> revRankNameAndValues {
+    std::map<int, std::string> revRankNameAndValues {
         {0,"2"},
         {1,"3"}, 
         {2,"4"},

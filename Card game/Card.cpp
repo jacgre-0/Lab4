@@ -3,13 +3,13 @@
 
 Card::Card(const std::string& suite, const std::string& rank) {
     this->suit.name = suite;
-    if (suiteNameAndValues.find(suite.c_str()) != suiteNameAndValues.end()) {
-        this->suit.value = suiteNameAndValues.at(suite.c_str());
+    if (suiteNameAndValues.find(suite) != suiteNameAndValues.end()) {
+        this->suit.value = suiteNameAndValues.at(suite);
     }
 
     this->rank.name = rank;
-    if (rankNameAndValues.find(rank.c_str()) != rankNameAndValues.end()) {
-        this->rank.value = rankNameAndValues.at(rank.c_str());
+    if (rankNameAndValues.find(rank) != rankNameAndValues.end()) {
+        this->rank.value = rankNameAndValues.at(rank);
     }
 }
 
@@ -28,4 +28,22 @@ Card::Card(const int suite, const int rank) {
 void Card::Print() const {
     std::cout << "Suit: " << suit.name << '\n';
     std::cout << "Rank: " << rank.name << std::endl;
+}
+
+bool Card::operator<(const Card& rhs) {
+    if (rank.value == rhs.rank.value) {
+        return suit.value < rhs.suit.value;
+    }
+    else {
+        return rank.value < rhs.rank.value;
+    }
+}
+
+bool Card::operator>(const Card& rhs) {
+    if (rank.value == rhs.rank.value) {
+        return suit.value > rhs.suit.value;
+    }
+    else {
+        return rank.value > rhs.rank.value;
+    }
 }
