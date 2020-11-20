@@ -3,7 +3,9 @@
 #include <random>
 
 void CardUtilities::shuffle(CardDeck* input) {
-    std::shuffle(std::begin(input->cards), std::end(input->cards), std::random_device());
+    std::random_device device;
+    std::default_random_engine engine(device());
+    std::shuffle(std::begin(input->cards), std::end(input->cards), engine);
 }
 
 void CardUtilities::sort(CardDeck* input) {
