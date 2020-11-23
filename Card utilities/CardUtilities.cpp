@@ -26,7 +26,7 @@ Card* CardUtilities::checkMissing(const CardDeck* input) {
     CardDeck deck;
     bool exist{};
     int numJokers{};
-    int allJokers = 3;
+    constexpr int ALL_JOKERS = 3;
     Card* missingCards = new Card[55]{};
     int missingCardsCounter{};
 
@@ -52,8 +52,8 @@ Card* CardUtilities::checkMissing(const CardDeck* input) {
         }
     }
 
-    for (int i = 0; i < allJokers - numJokers; i++) {
-        missingCards[missingCardsCounter++] = deck.cards[54];
+    for (int i = 0; i < ALL_JOKERS - numJokers; i++) {
+        missingCards[missingCardsCounter++] = joker;
     }
     return missingCards;
 }
