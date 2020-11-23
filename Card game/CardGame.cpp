@@ -15,7 +15,7 @@ void CardGame::play()
     int max = deck.NUM_SUITES * deck.NUM_RANKS + deck.NUM_JOKERS;
 
     //Setting up the random number generator
-    std::uniform_int_distribution<int> dist(0, max-1);
+    std::uniform_int_distribution<int> dist(min, max-1);
     std::random_device device;
     //Use the random_device to seed our engine
     std::default_random_engine eng(device());
