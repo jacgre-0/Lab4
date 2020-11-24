@@ -1,0 +1,19 @@
+I am using Visual Studio 2019
+
+What did you learn? What did you know already?
+I already have knowledge of what we have done so far
+
+What was difficult in the lab? How did you overcome it?
+One part I had to spend more time on was the Sort function in Task 6.
+The sort was actually pretty straight forward and my take on the sort was to
+*First sort the Deck by suits
+*Then sort each suit by their rank
+
+However my first solution I wrote required me to call the std::sort function 5 times, and I had to write
+8 additional for loops. This solution worked but I wasn't quite happy with it. After spending some time thinking 
+about a better solution I realized I could actually sort the card deck with only one 
+call to std::sort. (and no additional for loops)
+
+If you look at the commit history you can see all my iterations over the Card Utilities sort method. 
+
+I spent around 7-8 hours on this lab
