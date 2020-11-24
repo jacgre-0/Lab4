@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{fbe59a99-8972-41d0-a98f-00ed3967037a}</ProjectGuid>
-    <RootNamespace>Lab4</RootNamespace>
+    <ProjectGuid>{6acf109f-a419-4f57-b47e-300b5b9e5b80}</ProjectGuid>
+    <RootNamespace>MotorVehicle</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Motor Vehicle</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,17 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Body.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="MotorVehicle.h" />
+    <ClInclude Include="Owner.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Body.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MotorVehicle.cpp" />
     <ClCompile Include="Owner.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Body.h" />
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="MotorVehicle.h" />
-    <ClInclude Include="Owner.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

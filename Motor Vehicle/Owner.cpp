@@ -8,7 +8,7 @@ Owner::Owner(std::string name, std::string address, bool allowedToDrive)
 {}
 
 void Owner::Print() const {
-    std::cout << "Name: " << name << '\n' 
-              << "Address: " << address << '\n' 
-              << "Is allowed to drive: " << std::boolalpha << allowedToDrive << std::endl;
+    std::cout << "Name: " << name << '\n'
+        << "Address: " << address << '\n'
+        << "Is allowed to drive: " << std::boolalpha << allowedToDrive << std::endl;
 }

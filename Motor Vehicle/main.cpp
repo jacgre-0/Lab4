@@ -43,7 +43,7 @@ int main() {
     std::cout << "Give the number of tires on the vehicle: ";
     std::cin >> numberOfTires;
 
-    MotorVehicle vehicle {
+    MotorVehicle vehicle{
         {sizeInLitres, numberOfcylinders},
         {color, width, height},
         {name, address, allowedToDrive},
