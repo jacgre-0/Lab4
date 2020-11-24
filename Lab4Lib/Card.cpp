@@ -26,8 +26,8 @@ Card::Card(const int suite, const int rank) {
 }
 
 void Card::Print() const {
-    std::cout << "Suit: " << suit.name << '\n';
     std::cout << "Rank: " << rank.name << std::endl;
+    std::cout << "Suit: " << suit.name << '\n';
 }
 
 bool Card::operator<(const Card& rhs) {
