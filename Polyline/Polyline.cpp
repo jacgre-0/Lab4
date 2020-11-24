@@ -58,7 +58,7 @@ void PolyLine::remove_point() {
 
 bool PolyLine::contains(const Point2D& point) {
     for (int i = 0; i < numPoints; i++) {
-        if (points[i] != nullptr && *points[i] == point)
+        if (points[i] != nullptr && this->at(i) == point)
             return true;
     }
     return false;
@@ -72,13 +72,13 @@ float PolyLine::total_length() const {
     float dist{};
 
     for (int i = 0; i < numPoints-1; i++) {
-        dist += points[i]->distance(*points[i + 1]);
+        dist += this->at(i).distance(this->at(i+1));
     }
     return dist;
 }
 
 void PolyLine::print_coords() const {
     for (int i = 0; i < numPoints; i++) {
-        std::cout << points[i]->to_string() << std::endl;
+        std::cout << this->at(i).to_string() << std::endl;
     }
 }
